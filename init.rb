@@ -14,7 +14,7 @@ class UrlCustomFieldFormat < Redmine::CustomFieldFormat
   include ActionView::Helpers::TagHelper
 
   def format_as_url(value)
-    auto_link value
+    auto_link h(value)
   end
 
   def escape_html?
